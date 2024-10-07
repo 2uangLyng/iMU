@@ -28,14 +28,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             const errorData = await response.json();
             throw new Error(errorData.errors[0]?.message || "Login failed");
           }
-  
+
           const user = await response.json();
-  
+
           // Giả sử bạn nhận token từ API và cần lưu nó vào cookies
-          const token = user.token; // Thay đổi để lấy token đúng từ response
+          // const token = user.token; // Thay đổi để lấy token đúng từ response
           // Lưu token vào cookie hoặc localStorage
           // (Bạn có thể cần sử dụng thư viện cookie để dễ dàng làm việc với cookies)
-  
+
           return user; // Trả về user object để sử dụng trong session
 
         } catch (error) {

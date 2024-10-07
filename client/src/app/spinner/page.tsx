@@ -1,4 +1,4 @@
-import SpinWrapper from "../../components/spinner/spin-wrapper"
+import SpinWrapper from "@/components/spinner/spin-wrapper";
 const SpinTheWheel = () => {
   return (
     <SpinWrapper />

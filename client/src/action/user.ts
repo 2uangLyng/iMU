@@ -1,8 +1,6 @@
 'use server'
 
-import { signIn } from '../auth';
-import { CredentialsSignin } from 'next-auth';
-import { redirect } from 'next/navigation';
+import { signIn } from '@/auth';
 import { z } from 'zod';
 
 // Tạo schema Zod để xác thực dữ liệu form

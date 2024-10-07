@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { login } from "../../action/user";
 
+
 const LoginPage = () => {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
@@ -46,11 +47,12 @@ const LoginPage = () => {
         </Button>
 
         <p className="text-right text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          Don't have an account? <Link href="/register">Register</Link>
+          Don&apos;t have an account? <Link href="/register">Register</Link>
         </p>
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full"></div>
       </form>
+
     </div>
   );
 };

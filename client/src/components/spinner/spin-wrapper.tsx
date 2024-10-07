@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import ToggleButton from '@/components/ui/toggle-button';
+import ToggleButton from '../ui/toggle-button';
 import Image from 'next/image';
 export default function SpinWrapper() {
   const [isRotated, setIsRotated] = useState(false);
@@ -35,7 +35,7 @@ export default function SpinWrapper() {
           className={`transition-transform duration-1000 ${isRotated ? 'rotate' : ''}`}
         />
       </p>
-      <p 
+      <p
         className={`transform -translate-x-[-660px] -translate-y-[1500px] cursor-pointer`}
         onClick={handleRotate}
       >

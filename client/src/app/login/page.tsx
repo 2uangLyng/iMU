@@ -1,12 +1,12 @@
 // src/app/login/page.tsx
 'use client'
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { login } from "@/action/user";
+import { login } from "../../action/user";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -17,16 +17,16 @@ const LoginPage = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     setLoading(true);
-    
+
     const result = await login(formData);
-    
+
     if (!result.success) {
       setError(result.error || "An error occurred during login.");
     } else {
       // Chuyển hướng sau khi đăng nhập thành công
       router.push('/'); // Thay đổi đường dẫn phù hợp
     }
-    
+
     setLoading(false);
   };
 

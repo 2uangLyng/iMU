@@ -1,6 +1,6 @@
 'use server'
 
-import { signIn } from '@/auth';
+import { signIn } from '../auth';
 import { CredentialsSignin } from 'next-auth';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
